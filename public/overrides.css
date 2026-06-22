@@ -1,0 +1,172 @@
+/* Hackathon polish layer: kept separate so it safely overrides the compact base CSS. */
+.command-hero .hero-visual {
+  place-items: center;
+  overflow: hidden;
+}
+
+.command-hero .radar {
+  margin: auto;
+  transform: none;
+}
+
+.radar::after {
+  inset: auto !important;
+  left: 50%;
+  top: 50%;
+  width: 108px;
+  transform-origin: 0 50%;
+  transform: rotate(0deg);
+}
+
+@keyframes sweep {
+  to { transform: rotate(360deg); }
+}
+
+.map-foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 22px;
+  border-top: 1px solid var(--line);
+  font-size: 9px;
+}
+
+.map-foot a {
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.ops-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0 0 16px;
+}
+
+.ops-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  padding: 17px;
+}
+
+.ops-card span,
+.ops-card small {
+  display: block;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.ops-card b {
+  display: block;
+  font: 800 25px Manrope, sans-serif;
+  margin: 6px 0 2px;
+}
+
+.ops-card em {
+  color: #41a676;
+  font-size: 10px;
+  font-style: normal;
+}
+
+.analytics-extra {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.analytics-extra .panel {
+  padding: 20px;
+}
+
+.stat-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.stat-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 9px;
+  font-size: 11px;
+}
+
+.stat-list span {
+  color: var(--muted);
+}
+
+.multi-note {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #eaf8f0;
+  color: #287650;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+body[data-theme="dark"] .hotspot,
+body[data-theme="dark"] .judge-steps b,
+body[data-theme="dark"] .ops-card,
+body[data-theme="dark"] .analytics-extra .panel,
+body[data-theme="dark"] .mini-score {
+  background: #142126;
+  color: #f4f7f1;
+  border: 1px solid #2a3c42;
+}
+
+body[data-theme="dark"] .hotspot span,
+body[data-theme="dark"] .hotspot em,
+body[data-theme="dark"] .ai-judge-card p,
+body[data-theme="dark"] .reason-box li,
+body[data-theme="dark"] .review-card p,
+body[data-theme="dark"] .review-card li,
+body[data-theme="dark"] .target-strip span,
+body[data-theme="dark"] .map-foot,
+body[data-theme="dark"] .map-foot a,
+body[data-theme="dark"] .object-summary,
+body[data-theme="dark"] .limitations p,
+body[data-theme="dark"] .limitations summary {
+  color: #cbd8dc;
+}
+
+body[data-theme="dark"] .mmi-map,
+body[data-theme="dark"] .map-panel,
+body[data-theme="dark"] .track,
+body[data-theme="dark"] .recent-row,
+body[data-theme="dark"] th,
+body[data-theme="dark"] td {
+  border-color: #2a3c42;
+}
+
+body[data-theme="dark"] .tag {
+  background: #351d18;
+  color: #ffb7a7;
+}
+
+body[data-theme="dark"] .readiness-ring {
+  box-shadow: inset 0 0 0 8px #142126;
+}
+
+body[data-theme="dark"] .model-proof span,
+body[data-theme="dark"] .multi-note {
+  background: #173228;
+  color: #baffd8;
+}
+
+@media (max-width: 1100px) {
+  .ops-stats { grid-template-columns: repeat(2, 1fr); }
+  .analytics-extra { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .ops-stats { grid-template-columns: 1fr; }
+  .floating-card { position: static; margin: 8px; }
+  .hero-visual { padding: 22px; }
+  .radar { width: 190px; height: 190px; }
+}
