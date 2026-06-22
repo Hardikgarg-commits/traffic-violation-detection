@@ -1,0 +1,14 @@
+{
+  "name": "drishti-ai-traffic-enforcement",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hackathon-ready traffic violation detection and evidence management prototype",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test --test-isolation=none",
+    "setup:ai": "powershell -ExecutionPolicy Bypass -File scripts/setup-ai.ps1",
+    "watch:frames": ".\\.venv\\Scripts\\python.exe watcher.py"
+  },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,12 @@
+{
+  "cameraId": "CAM-04",
+  "location": "KR Circle, Bengaluru",
+  "gps": {"lat": 12.9746, "lon": 77.5805},
+  "roadPolygon": [[80,300],[1180,250],[1200,700],[0,700]],
+  "stopLine": [[310,430],[1050,390]],
+  "laneDirections": [
+    {"polygon": [[0,400],[600,260],[750,700],[0,700]], "allowedVector": [0,-1]}
+  ],
+  "signalRoi": [930,80,1000,190],
+  "parkingZones": []
+}

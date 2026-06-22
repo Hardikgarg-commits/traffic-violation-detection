@@ -1,0 +1,17 @@
+node_modules/
+.env
+coverage/
+.venv/
+.tmp-ai/
+models/*.pt
+*.pt
+weights/
+__pycache__/
+data/incidents.json
+data/incoming_frames.json
+data/incoming_frames/*
+!data/incoming_frames/.gitkeep
+data/demo_frames/*
+!data/demo_frames/.gitkeep
+data/evidence/
+*.log
